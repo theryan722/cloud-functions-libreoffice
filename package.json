@@ -1,17 +1,9 @@
 {
-  "name": "aws-lambda-libreoffice",
+  "name": "cloud-functions-libreoffice",
   "version": "0.1.1",
-  "description": "85 MB LibreOffice to fit inside AWS Lambda compressed with Brotli",
+  "description": "85 MB LibreOffice to fit inside Google Cloud Functions compressed with Brotli",
   "license": "MIT",
-  "repository": "vladgolubev/aws-lambda-libreoffice",
-  "author": {
-    "name": "Vlad Holubiev",
-    "email": "golubev.vld@gmail.com",
-    "url": "vladholubiev.com"
-  },
-  "engines": {
-    "node": ">=8.10"
-  },
+  "repository": "vially/cloud-functions-libreoffice",
   "scripts": {
     "lint": "eslint . --fix"
   },
@@ -22,6 +14,7 @@
   "main": "src/index.js",
   "keywords": [],
   "dependencies": {
+    "iltorb": "^2.3.2",
     "tar-fs": "^1.16.2"
   },
   "devDependencies": {
@@ -31,9 +24,6 @@
     "husky": "^0.15.0-beta.16",
     "lint-staged": "^7.1.1",
     "prettier": "^1.9.2"
-  },
-  "optionalDependencies": {
-    "iltorb": "^2.2.0"
   },
   "husky": {
     "hooks": {

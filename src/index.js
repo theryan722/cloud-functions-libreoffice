@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const tar = require('tar-fs');
 const defaultArgs = require('./args');
+const { decompressStream } = require('iltorb');
 
 module.exports.defaultArgs = defaultArgs;
 
@@ -48,6 +49,6 @@ module.exports.getExecutablePath = function() {
       });
     });
 
-    source.pipe(require(`${__dirname}/iltorb`).decompressStream()).pipe(target);
+    source.pipe(decompressStream()).pipe(target);
   });
 };
