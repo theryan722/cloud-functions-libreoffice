@@ -1,14 +1,16 @@
 {
   "name": "cloud-functions-libreoffice",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "85 MB LibreOffice to fit inside Google Cloud Functions compressed with Brotli",
   "license": "MIT",
   "repository": "vially/cloud-functions-libreoffice",
   "scripts": {
+    "postinstall": "node ./scripts/install.js",
     "lint": "eslint . --fix"
   },
   "files": [
     "src",
+    "scripts",
     "bin"
   ],
   "main": "src/index.js",
